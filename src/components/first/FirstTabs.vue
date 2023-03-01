@@ -72,7 +72,12 @@
                 <v-window-item value="tab-second-factor">
                     <v-container>
                         <first-second-factor-content />
-
+                        <first-button-bar>
+                            <v-btn @click="tokenContinue()">Sicherheitstoken hinzufügen</v-btn>
+                            <v-btn @click="otpContinue()">Einmalpasswort hinzufügen</v-btn>
+                            <v-btn v-if="appStore.credentialState.otpCount > 0 || appStore.credentialState.webauthnCount > 0"
+                                        @click="secondFactorSkip()">Weiter (überspringen)</v-btn>
+                        </first-button-bar>
                     </v-container>
                 </v-window-item>
                 <v-window-item value="tab-summary">
@@ -90,7 +95,7 @@
 import { onMounted, ref } from "vue";
 import { useAppStore } from "@/store/app";
 import { LoginState } from "@/models/LoginState";
-import { createRecoveryCodes, login } from "@/services/LoginService";
+import { createOTP, createRecoveryCodes, createWebauthn, login } from "@/services/LoginService";
 import FirstButtonBar from "./FirstButtonBar.vue";
 import FirstWelcomeContent from "./FirstWelcomeContent.vue";
 import FirstLoginContent from "./FirstLoginContent.vue";
@@ -230,6 +235,14 @@ function recoveryContinue() {
 
 }
 
+function otpContinue() {
+    createOTP();
+}
+
+function tokenContinue() {
+    createWebauthn();
+}
+
 function recoverySkip() {
     tab.value = "tab-second-factor";
     colors = {
@@ -245,6 +258,24 @@ function recoverySkip() {
         recovery: false,
         secondFactor: false,
         summary: true
+    };
+}
+
+function secondFactorSkip() {
+    tab.value = "tab-summary";
+    colors = {
+        welcome: colorSet.done,
+        login: colorSet.done,
+        recovery: colorSet.done,
+        secondFactor: colorSet.done,
+        summary: colorSet.unset
+    };
+    readOnly = {
+        welcome: false,
+        login: false,
+        recovery: false,
+        secondFactor: false,
+        summary: false
     };
 }
 
