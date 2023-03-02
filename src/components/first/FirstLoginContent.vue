@@ -1,14 +1,12 @@
 <template>
-    <h1>Anmelden</h1>
-    <p>Ihr Passwort ist der zentrale Sicherheitsfaktor für Ihr Hochschulaccount. Deshalb ist es wichtig, dass Sie ein gutes
-        und sicheres Passwort verwenden, dass Sie für keinen anderen Dienst einsetzen.</p>
+    <h1>{{  t('title') }}</h1>
+    <p>{{  t('text') }}</p>
 
     <br />
 
     <p>Ein gutes Passwort sollte </p>
 
     <v-container>
-
         <ul>
             <li>gut zu merken</li>
             <li>möglichst komplex</li>
@@ -51,3 +49,19 @@
         werden Sie aufgefordert, dies zu ändern. Sollten Sie diesen Schritt bereits erledigt haben, werden Sie ohne diese
         Aufforderung weitergeleitet.</p>
 </template>
+<script setup lang="ts">
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n({
+messages: {
+  de: {
+    title: "Anmelden",
+    text: "Ihr Passwort ist der zentrale Sicherheitsfaktor für Ihr Hochschulaccount. Deshalb ist es wichtig, dass Sie ein gutes und sicheres Passwort verwenden, dass Sie für keinen anderen Dienst einsetzen."
+  },
+  en: {
+    title: "Login",
+    text: "TODO: translate"
+  }
+}
+})
+</script>

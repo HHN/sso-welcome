@@ -1,8 +1,6 @@
 <template>
-    <h1>Wiederherstellungscodes</h1>
-    <p>Neben Ihrem Passwort werden Sie an immer mehr Anwendungen einen zweiten Faktor benötigen, um sich an diesen
-        anzumelden. Was ein zweiter Faktor ist, wie man ihn verwendet und wieso er wichtig ist, wird in einem nachfolgenden
-        Schritt beschrieben.</p>
+    <h1>{{  t('title') }}</h1>
+    <p>{{  t('text') }}</p>
 
     <br />
 
@@ -26,3 +24,20 @@
     <p>Sollten Sie diesen Schritt bereits erledigt haben, haben Sie nachfolgend die Möglichkeit diesen Schritt zu
         überspringen oder neue Wiederherstellungscodes zu erzeugen.</p>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n({
+messages: {
+  de: {
+    title: "Wiederherstellungscodes",
+    text: "Neben Ihrem Passwort werden Sie an immer mehr Anwendungen einen zweiten Faktor benötigen, um sich an diesen anzumelden. Was ein zweiter Faktor ist, wie man ihn verwendet und wieso er wichtig ist, wird in einem nachfolgenden Schritt beschrieben."
+  },
+  en: {
+    title: "Recovery Code",
+    text: "TODO: translate"
+  }
+}
+})
+</script>

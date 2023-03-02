@@ -1,9 +1,6 @@
 <template>
-    <h1>2. Faktor / Mehrfaktorauthentifizierung</h1>
-    <p>Die Mehrfaktorauthentifizierung (MFA) ist ein Sicherheitsverfahren, das in vielen Online-Diensten und Anwendungen
-        eingesetzt wird, um die Sicherheit von Benutzerkonten zu erhöhen. Sie stellt sicher, dass der Zugriff auf ein
-        Benutzerkonto nicht nur durch Kenntnis eines Passworts möglich ist, sondern zusätzliche Faktoren benötigt werden, um
-        sich erfolgreich anzumelden.</p>
+    <h1>{{  t('title') }}</h1>
+    <p>{{  t('text') }}</p>
 
     <br />
 
@@ -87,3 +84,19 @@
         gewählte Variante wird beim Login zuerst vorgeschlagen. Damit ersparen Sie sich das manuelle Neuauswählen bei
         jedem Login.</p>
 </v-alert></template>
+<script setup lang="ts">
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n({
+messages: {
+  de: {
+    title: "2. Faktor / Mehrfaktorauthentifizierung",
+    text: "Die Mehrfaktorauthentifizierung (MFA) ist ein Sicherheitsverfahren, das in vielen Online-Diensten und Anwendungen eingesetzt wird, um die Sicherheit von Benutzerkonten zu erhöhen. Sie stellt sicher, dass der Zugriff auf ein Benutzerkonto nicht nur durch Kenntnis eines Passworts möglich ist, sondern zusätzliche Faktoren benötigt werden, um sich erfolgreich anzumelden."
+  },
+  en: {
+    title: "Second Faktor",
+    text: "TODO: translate"
+  }
+}
+})
+</script>
