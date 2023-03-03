@@ -10,11 +10,4 @@ import { LoginState } from "@/models/LoginState";
 
 const appStore = useAppStore();
 </script>
-<style lang="scss">
-.v-container {
-  padding: 12px;
-  max-width: 1200px;
-  @media (min-width: 960px) {
-  }
-}
-</style>
+<style lang="scss"></style>
