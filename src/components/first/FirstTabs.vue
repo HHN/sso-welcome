@@ -302,7 +302,17 @@ function secondFactorSkip() {
 */
 .v-row {
   flex-direction: inherit;
-
+  gap: 10px;
+  padding: 10px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    .v-tab.v-tab {
+      --v-btn-height: 30px;
+    }
+  }
+  .v-col {
+    padding: 0px;
+  }
   .v-col-2 {
     display: flex;
     max-width: none;
@@ -311,7 +321,9 @@ function secondFactorSkip() {
     display: flex;
     flex: 1;
     max-width: none;
-    padding: 0px;
+    .v-container {
+      padding: 0px 10px;
+    }
   }
   .v-tabs {
     .v-btn--size-default {

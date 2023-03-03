@@ -77,6 +77,7 @@ const appStore = useAppStore();
       margin-right: 12px;
     }
   }
+
   .v-btn {
     padding: 0px;
     //margin-right: 12px;
