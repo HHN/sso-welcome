@@ -116,7 +116,7 @@ const { t } = useI18n({
     de: {
       title: "Anmelden",
       text: "Ihr Passwort ist der zentrale Sicherheitsfaktor für Ihren Hochschulaccount. Deshalb ist es wichtig, dass Sie ein gutes und sicheres Passwort verwenden. Falls Sie Ihr Initialpasswort noch nicht geändert haben, werden Sie im nächsten Schritt gebeten dies zu tun. Nachfolgend wird erklärt, wie Sie mit Ihrem Hochschulpasswort umgehen und wie Sie dieses erstellen.",
-      subtitle1: "Wie gehe ich mit neinem Passwort um?",
+      subtitle1: "Wie gehe ich mit meinem Passwort um?",
       tr1: "Verwenden Sie keine gleichen Passwörter für verschiedene Accounts.",
       tr2: "Halten Sie Ihr Passwört unter Verschluss, indem Sie beispielsweise einen Passwortmanager nutzen.",
       tr3: "Geben Sie Ihr Passwört nicht an Dritte weiter und versenden Sie ihr Passwört nicht per E-Mail.",

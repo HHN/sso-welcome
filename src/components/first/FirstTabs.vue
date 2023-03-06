@@ -4,23 +4,23 @@
       <v-tabs v-model="tab" direction="vertical" color="primary">
         <v-tab value="tab-welcome" :disabled="readOnly.welcome">
           <v-icon start :color="colors.welcome"> mdi-account </v-icon>
-          Willkommen
+          {{ t("welcome") }}
         </v-tab>
         <v-tab value="tab-login" :disabled="readOnly.login">
           <v-icon start :color="colors.login"> mdi-lock </v-icon>
-          Login
+          {{ t("login") }}
         </v-tab>
         <v-tab value="tab-recovery" :disabled="readOnly.recovery">
           <v-icon start :color="colors.recovery"> mdi-lock-reset </v-icon>
-          Wiederherstellungscodes
+          {{ t("recovery") }}
         </v-tab>
         <v-tab value="tab-second-factor" :disabled="readOnly.secondFactor">
           <v-icon start :color="colors.secondFactor"> mdi-key </v-icon>
-          2. Faktor
+          {{ t("secondFactor") }}
         </v-tab>
         <v-tab value="tab-summary" :disabled="readOnly.summary">
           <v-icon start :color="colors.summary"> mdi-subtitles </v-icon>
-          Zusammenfassung
+          {{ t("conclusion") }}
         </v-tab>
       </v-tabs>
     </v-col>
@@ -50,13 +50,13 @@
             <first-button-bar>
               <v-btn @click="recoveryContinue()">{{
                 appStore.credentialState.recoveryCodeCountRemaining <= 0
-                  ? "Weiter (erzeugen)"
-                  : "neu generieren"
+                  ? t("continueCreate")
+                  : t("generateNew")
               }}</v-btn>
               <v-btn
                 v-if="appStore.credentialState.recoveryCodeCountRemaining > 0"
                 @click="recoverySkip()"
-                >Weiter (überspringen)</v-btn
+                >{{ t("continueSkip") }}</v-btn
               >
             </first-button-bar>
           </v-container>
@@ -65,17 +65,15 @@
           <v-container>
             <first-second-factor-content />
             <first-button-bar>
-              <v-btn @click="tokenContinue()"
-                >Sicherheitstoken hinzufügen</v-btn
-              >
-              <v-btn @click="otpContinue()">Einmalpasswort hinzufügen</v-btn>
+              <v-btn @click="tokenContinue()">{{ t("addToken") }}</v-btn>
+              <v-btn @click="otpContinue()">{{ t("addOTP") }}</v-btn>
               <v-btn
                 v-if="
                   appStore.credentialState.otpCount > 0 ||
                   appStore.credentialState.webauthnCount > 0
                 "
                 @click="secondFactorSkip()"
-                >Weiter (überspringen)</v-btn
+                >{{ t("continueSkip") }}</v-btn
               >
             </first-button-bar>
           </v-container>
@@ -134,9 +132,24 @@ const { t } = useI18n({
   messages: {
     de: {
       continue: "Weiter",
+      welcome: "Willkommen",
+      login: "Login",
+      recovery: "Wiederherstellungscodes",
+      secondFactor: "2. Faktor",
+      conclusion: "Zusammenfassung",
+      continueCreate: "Weiter (erzeugen)",
+      generateNew: "neu generieren",
+      conrtinueSkip: "Weiter (überspringen)",
+      addToken: "Sicherheitstoken hinzufügen",
+      addOTP: "Einmalpasswort hinzufügen",
     },
     en: {
       continue: "Continue",
+      welcome: "Welcome",
+      login: "Login",
+      recovery: "Recovery codes",
+      secondFactor: "Second Factor",
+      conclusion: "conclusion",
     },
   },
 });
