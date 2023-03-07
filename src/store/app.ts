@@ -8,7 +8,7 @@ export const useAppStore = defineStore('app', {
   state: () => ({
     //
     keycloak: new Keycloak({
-      url: 'https://login.hhn-test.de',
+      url: 'https://login.hs-heilbronn.de',
       realm: 'hhn',
       clientId: 'hhn_rz_first',
   }),

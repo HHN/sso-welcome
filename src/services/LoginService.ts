@@ -15,16 +15,16 @@ export function initLogin() {
         if (authenticated) {
             //document.getElementById("account_name").textContent = loggedInUserName();
             appStore.fullName = loggedInUserName(keycloak);
-    
 
-        var url = 'https://login.hhn-test.de/realms/hhn/account/credentials';
+
+        var url = 'https://login.hs-heilbronn.de/realms/hhn/account/credentials';
         var req = new XMLHttpRequest();
         req.open('GET', url, true);
         req.setRequestHeader('Accept', 'application/json');
         req.setRequestHeader('Authorization', 'bearer ' + keycloak.token);
-    
+
        // var promise = createPromise();
-    
+
         req.onreadystatechange = function () {
             if (req.readyState == 4) {
                 if (req.status == 200) {
@@ -57,15 +57,15 @@ export function initLogin() {
                 }
             }
         };
-    
+
         req.send();
         } else {
             appStore.loggedIn = LoginState.NOT_LOGGED_IN;
             appStore.waitingForLoginState = false;
 
         }
-        
-    
+
+
     }).catch(function(e) {
         //alert('failed to initialize');
         console.log(e);
