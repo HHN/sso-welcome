@@ -14,19 +14,17 @@
         {{ t("text2") }}
       </p>
 
-      <v-container>
-        <ol>
-          <li>
-            {{ t("li1") }}
-          </li>
-          <li>
-            {{ t("li2") }}
-          </li>
-          <li>
-            {{ t("li3") }}
-          </li>
-        </ol>
-      </v-container>
+      <ol style="padding-left: 20px">
+        <li>
+          {{ t("li1") }}
+        </li>
+        <li>
+          {{ t("li2") }}
+        </li>
+        <li>
+          {{ t("li3") }}
+        </li>
+      </ol>
 
       <p>
         {{ t("text21") }}
@@ -44,34 +42,33 @@
     <p>
       {{ t("text4") }}
     </p>
-    <v-container>
-      <ul>
-        <li>{{ t("li4") }}</li>
-        <li>{{ t("li5") }}</li>
-        <li>
-          {{ t("li6") }}
-          <a
-            href="https://support.apple.com/guide/mac-help/create-a-passkey-mchl4af65d1a/mac"
-            target="_blank"
-            >{{ t("macOS") }}</a
-          >
-          {{ t("and") }}
-          <a
-            href="https://support.apple.com/guide/iphone/use-passkeys-in-safari-iph37306ae67/ios"
-            target="_blank"
-            >{{ t("iPhone") }}</a
-          >
-        </li>
-        <li>
-          {{ t("li7") }}
-          <a
-            href="https://developers.google.com/identity/passkeys/supported-environments"
-            target="_blank"
-            >{{ t("li7Link") }}</a
-          >
-        </li>
-      </ul>
-    </v-container>
+
+    <ul style="padding-left: 10px">
+      <li>{{ t("li4") }}</li>
+      <li>{{ t("li5") }}</li>
+      <li>
+        {{ t("li6") }}
+        <a
+          href="https://support.apple.com/guide/mac-help/create-a-passkey-mchl4af65d1a/mac"
+          target="_blank"
+          >{{ t("macOS") }}</a
+        >
+        {{ t("and") }}
+        <a
+          href="https://support.apple.com/guide/iphone/use-passkeys-in-safari-iph37306ae67/ios"
+          target="_blank"
+          >{{ t("iPhone") }}</a
+        >
+      </li>
+      <li>
+        {{ t("li7") }}
+        <a
+          href="https://developers.google.com/identity/passkeys/supported-environments"
+          target="_blank"
+          >{{ t("li7Link") }}</a
+        >
+      </li>
+    </ul>
 
     <p>
       <b>{{ t("text5") }}</b>
@@ -87,36 +84,35 @@
     <p>
       {{ t("text6") }}
     </p>
-    <v-container>
-      <ul>
-        <li>
-          {{ t("li8") }}
-          <a
-            href="https://play.google.com/store/apps/details?id=com.azure.authenticator"
-            target="_blank"
-            >{{ t("microsoftPlay") }}</a
-          >,
-          <a
-            href="https://apps.apple.com/us/app/microsoft-authenticator/id983156458"
-            target="_blank"
-            >{{ t("microsoftApple") }}</a
-          >
-        </li>
-        <li>
-          {{ t("li9") }}
-          <a
-            href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"
-            target="_blank"
-            >{{ t("googlePlay") }}</a
-          >,
-          <a
-            href="https://apps.apple.com/us/app/google-authenticator/id388497605"
-            target="_blank"
-            >{{ t("googleApple") }}</a
-          >
-        </li>
-      </ul>
-    </v-container>
+
+    <ul style="padding-left: 10px">
+      <li>
+        {{ t("li8") }}
+        <a
+          href="https://play.google.com/store/apps/details?id=com.azure.authenticator"
+          target="_blank"
+          >{{ t("microsoftPlay") }}</a
+        >,
+        <a
+          href="https://apps.apple.com/us/app/microsoft-authenticator/id983156458"
+          target="_blank"
+          >{{ t("microsoftApple") }}</a
+        >
+      </li>
+      <li>
+        {{ t("li9") }}
+        <a
+          href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"
+          target="_blank"
+          >{{ t("googlePlay") }}</a
+        >,
+        <a
+          href="https://apps.apple.com/us/app/google-authenticator/id388497605"
+          target="_blank"
+          >{{ t("googleApple") }}</a
+        >
+      </li>
+    </ul>
 
     <p>
       {{ t("text7") }}

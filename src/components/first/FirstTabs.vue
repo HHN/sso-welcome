@@ -1,5 +1,5 @@
-<template>
-  <v-row class="first-tabs">
+<template class="first-tabs">
+  <v-row>
     <v-col cols="2">
       <v-tabs v-model="tab" direction="vertical" color="primary">
         <v-tab value="tab-welcome" :disabled="readOnly.welcome">
@@ -325,6 +325,10 @@ function secondFactorSkip() {
   flex-direction: inherit;
   gap: 10px;
   padding: 10px;
+  .v-row {
+    flex-wrap: none !important;
+  }
+
   @media (max-width: 600px) {
     flex-direction: column;
     .v-tab.v-tab {
