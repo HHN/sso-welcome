@@ -79,7 +79,9 @@
           </v-container>
         </v-window-item>
         <v-window-item value="tab-summary">
-          <v-container> Summary </v-container>
+          <v-container>
+            <first-summary-content />
+          </v-container>
         </v-window-item>
       </v-window>
     </v-col>
@@ -101,6 +103,7 @@ import FirstWelcomeContent from "./FirstWelcomeContent.vue";
 import FirstLoginContent from "./FirstLoginContent.vue";
 import FirstRecoveryContent from "./FirstRecoveryContent.vue";
 import FirstSecondFactorContent from "./FirstSecondFactorContent.vue";
+import FirstSummaryContent from "./FirstSummaryContent.vue";
 import { useI18n } from "vue-i18n";
 
 const tab = ref<string>("tab-summary");
@@ -139,17 +142,22 @@ const { t } = useI18n({
       conclusion: "Zusammenfassung",
       continueCreate: "Weiter (erzeugen)",
       generateNew: "neu generieren",
-      conrtinueSkip: "Weiter (überspringen)",
-      addToken: "Sicherheitstoken hinzufügen",
-      addOTP: "Einmalpasswort hinzufügen",
+      continueSkip: "Weiter (überspringen)",
+      addToken: "Weiter (Registrierung Sicherheitstoken)",
+      addOTP: "Weiter (Registrierung Einmalpasswörter)",
     },
     en: {
-      continue: "Continue",
+      continue: "Next",
       welcome: "Welcome",
       login: "Login",
       recovery: "Recovery codes",
       secondFactor: "Second Factor",
-      conclusion: "conclusion",
+      conclusion: "summary",
+      continueCreate: "Next (generate)",
+      generateNew: "Regenerate",
+      continueSkip: "Next (Skip)",
+      addToken: "Next (register security token)",
+      addOTP: "Next (register one-time passwords)",
     },
   },
 });
