@@ -10,7 +10,7 @@
       <card-account-management href="/realms/hhn/account" />
     </v-col>
     <v-col cols="12" xs="12" sm="6" md="6">
-      <card-help href="https://www.hs-heilbronn.de/login-hilfe" />
+      <card-help href="https://www.hs-heilbronn.de/reset" />
     </v-col>
     <!--<v-col cols="12" xs="12" sm="6" md="6">
       <card-apps href="https://www.hs-heilbronn.de/login-apps" />
