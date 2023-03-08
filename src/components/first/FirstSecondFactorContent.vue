@@ -207,7 +207,7 @@ const { t } = useI18n({
         "The login portal supports preferably “security tokens” which can take on various forms. This includes all physical devices that support the FIDO2 / WebAuthn standard. For example:",
       li4: "USB hardware token like YubiKeys",
       li5: "Current Windows devices with Windows Hello enabled",
-      li6: "Apple Passkey on macOS and iPhone",
+      li6: "Apple Passkey on ",
       macOs: "macOS",
       and: "and",
       iPhone: "iPhone",
@@ -222,7 +222,12 @@ const { t } = useI18n({
       subtitle4: "One-time passwords",
       text6:
         "In addition to security tokens, the login-portal also supports the use of time-based one-time passwords (TOTP). For this, a smartphone app will generate time-based one-time passwords which can then be used as a second factor when logging in. In order to use such a setup we recommend one of the following apps:",
-
+      li8: "Microsoft Authenticator",
+      microsoftPlay: "Google Play Store",
+      microsoftApple: "Apple App Store",
+      li9: "Google Authenticator",
+      googlePlay: "Google Play Store",
+      googleApple: "Apple App Store",
       text7:
         'Install one of these apps on your smartphone. Then continue the setup process by clicking the "Next (register one-time passwords)" button below and following the instructions. Among other things, you will be prompted to scan a QR code with the app. The app will then be able to generate one-time passwords that you can use within future logins to the login portal.',
       subtitle6: "Important Notes",
