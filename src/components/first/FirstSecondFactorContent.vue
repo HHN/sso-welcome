@@ -1,5 +1,5 @@
 <template>
-  <div class="items-container">
+  <div class="items-container linebreak">
     <h1>{{ t("title") }}</h1>
     <p>{{ t("text") }}</p>
 

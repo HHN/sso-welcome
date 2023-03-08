@@ -7,5 +7,9 @@ $hhn-blue: #354e91;
     h1{
         padding-bottom: 5px;
     }
+    &.linebreak {
+        h1 {
+          line-break: anywhere;
+        }}
 }
 

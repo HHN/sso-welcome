@@ -1,5 +1,5 @@
-<template class="first-tabs">
-  <v-row>
+<template>
+  <v-row class="first-tabs">
     <v-col cols="2">
       <v-tabs v-model="tab" direction="vertical" color="primary">
         <v-tab value="tab-welcome" :disabled="readOnly.welcome">
@@ -346,9 +346,6 @@ function secondFactorSkip() {
     display: flex;
     flex: 1;
     max-width: none;
-    .v-container {
-      padding: 0px 10px;
-    }
   }
   .v-tabs {
     .v-btn--size-default {
