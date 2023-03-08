@@ -1,8 +1,8 @@
 <template>
   <br />
-  <div class="centered">
+  <v-row class="centered">
     <slot></slot>
-  </div>
+  </v-row>
 </template>
 <style lang="scss">
 @import "../../styles/variables.scss";

@@ -12,9 +12,9 @@
     <v-col cols="12" xs="12" sm="6" md="6">
       <card-help href="https://www.hs-heilbronn.de/login-hilfe" />
     </v-col>
-    <v-col cols="12" xs="12" sm="6" md="6">
+    <!--<v-col cols="12" xs="12" sm="6" md="6">
       <card-apps href="https://www.hs-heilbronn.de/login-apps" />
-    </v-col>
+    </v-col>-->
   </v-row>
 </template>
 <script lang="ts" setup>

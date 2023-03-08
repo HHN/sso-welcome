@@ -1,5 +1,5 @@
-<template>
-  <v-row class="first-tabs">
+<template class="first-tabs">
+  <v-row>
     <v-col cols="2">
       <v-tabs v-model="tab" direction="vertical" color="primary">
         <v-tab value="tab-welcome" :disabled="readOnly.welcome">
@@ -79,7 +79,9 @@
           </v-container>
         </v-window-item>
         <v-window-item value="tab-summary">
-          <v-container> Summary </v-container>
+          <v-container>
+            <first-summary-content />
+          </v-container>
         </v-window-item>
       </v-window>
     </v-col>
@@ -101,6 +103,7 @@ import FirstWelcomeContent from "./FirstWelcomeContent.vue";
 import FirstLoginContent from "./FirstLoginContent.vue";
 import FirstRecoveryContent from "./FirstRecoveryContent.vue";
 import FirstSecondFactorContent from "./FirstSecondFactorContent.vue";
+import FirstSummaryContent from "./FirstSummaryContent.vue";
 import { useI18n } from "vue-i18n";
 
 const tab = ref<string>("tab-summary");
@@ -134,22 +137,27 @@ const { t } = useI18n({
       continue: "Weiter",
       welcome: "Willkommen",
       login: "Login",
-      recovery: "Wiederherstellungscodes",
+      recovery: "Wdh.codes",
       secondFactor: "2. Faktor",
-      conclusion: "Zusammenfassung",
+      conclusion: "Übersicht",
       continueCreate: "Weiter (erzeugen)",
       generateNew: "neu generieren",
-      conrtinueSkip: "Weiter (überspringen)",
-      addToken: "Sicherheitstoken hinzufügen",
-      addOTP: "Einmalpasswort hinzufügen",
+      continueSkip: "Weiter (überspringen)",
+      addToken: "Weiter (Sicherheitstoken)",
+      addOTP: "Weiter (Einmalpasswörter)",
     },
     en: {
-      continue: "Continue",
+      continue: "Next",
       welcome: "Welcome",
       login: "Login",
       recovery: "Recovery codes",
       secondFactor: "Second Factor",
-      conclusion: "conclusion",
+      conclusion: "summary",
+      continueCreate: "Next (generate)",
+      generateNew: "Regenerate",
+      continueSkip: "Next (Skip)",
+      addToken: "Next (security token)",
+      addOTP: "Next (one-time passwords)",
     },
   },
 });
@@ -317,6 +325,10 @@ function secondFactorSkip() {
   flex-direction: inherit;
   gap: 10px;
   padding: 10px;
+  .v-row {
+    flex-wrap: none !important;
+  }
+
   @media (max-width: 600px) {
     flex-direction: column;
     .v-tab.v-tab {
