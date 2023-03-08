@@ -56,6 +56,7 @@ const { t, locale } = useI18n({ useScope: "global" });
 
 function setLanguage(val: string) {
   locale.value = val;
+  localStorage.setItem('lang',val);
 }
 
 const appStore = useAppStore();
