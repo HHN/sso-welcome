@@ -1,6 +1,7 @@
 import { useAppStore } from "@/store/app";
 import Keycloak from "keycloak-js";
 import { LoginState } from "@/models/LoginState";
+import router from "@/router";
 
 const appStore = useAppStore();
 
@@ -49,6 +50,9 @@ export function initLogin() {
                     appStore.loggedIn = LoginState.LOGGED_IN;
                     appStore.waitingForLoginState = false;
 
+                    if (appStore.credentialState.recoveryCodeCountRemaining === 0 || (appStore.credentialState.otpCount === 0 && appStore.credentialState.webauthnCount === 0)) {
+                        router.push('/first');
+                    }
 
 
                     //promise.setSuccess(kc.profile);

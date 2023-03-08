@@ -16,6 +16,10 @@ const routes = [
         name: 'Benutzerregistrierung',
         component: () => import('@/views/First.vue'),
       },
+      {
+        path: '/:pathMatch(.*)*',
+        redirect: '/',
+      }
     ],
   },
 ]

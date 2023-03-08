@@ -1,0 +1,11 @@
+$hhn-blue: #354e91;
+
+.items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h1{
+        padding-bottom: 5px;
+    }
+}
+
