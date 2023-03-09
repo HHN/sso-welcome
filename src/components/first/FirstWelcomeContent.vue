@@ -9,6 +9,7 @@
         >https://www.hs-heilbronn.de/reset</a
       >.
     </p>
+    <p>{{ t("text4") }}</p>
   </div>
 </template>
 <script setup lang="ts">
@@ -24,6 +25,8 @@ const { t } = useI18n({
         "Mit diesem Konto können Sie sich anschließend an wichtigen Diensten, wie bspw. VPN oder der ILIAS Lernplattform anmelden.",
       text3:
         "Wir versuchen, Ihnen die Einrichtung des Kontos so einfach wie möglich zu machen. Folgen Sie dazu einfach den Anweisungen auf den nachfolgenden Seiten. Bei Problemen oder Rückfragen, wenden Sie sich bitte an die Benutzerberatung (Helpdesk). Die Kontaktdaten finden Sie unter",
+      text4:
+        "Bitte führen Sie die Ersteinrichtung Ihres Accounts an einem regulären Computer durch und nicht direkt an einem Smartphone.",
     },
     en: {
       title: "Welcome!",
@@ -33,6 +36,8 @@ const { t } = useI18n({
         "With this account you can then log into important university IT services, such as VPN or the ILIAS learning platform.",
       text3:
         "We try to make it as easy as possible for you to set up your new account. Simply follow the instructions on the following pages. If you have any problems or queries, please contact the user support. Please find the support contact details at",
+      text4:
+        "Please complete the initial account setup on a regular computer and not directly on your smartphone.",
     },
   },
 });
