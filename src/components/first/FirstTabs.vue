@@ -65,8 +65,8 @@
           <v-container>
             <first-second-factor-content />
             <first-button-bar>
-              <v-btn @click="tokenContinue()">{{ t("addToken") }}</v-btn>
-              <v-btn @click="otpContinue()">{{ t("addOTP") }}</v-btn>
+              <v-btn @click="tokenContinue()" id="tokenButton">{{ t("addToken") }}</v-btn>
+              <v-btn @click="otpContinue()" id="otpButton">{{ t("addOTP") }}</v-btn>
               <v-btn
                 v-if="
                   appStore.credentialState.otpCount > 0 ||
@@ -353,5 +353,12 @@ function secondFactorSkip() {
     }
   }
   //max-width: 0px;
+  #tokenButton {
+    background-color: rgb(251, 140, 0);
+  }
+
+  #otpButton {
+    background-color: rgb(33, 150, 243);
+  }
 }
 </style>

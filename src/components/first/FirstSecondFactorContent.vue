@@ -124,10 +124,16 @@
       <p>
         {{ t("text9") }}
       </p>
+
+    </v-alert>
+
+    <v-alert type="info" variant="tonal" :title="t('subtitle7')">
       <p>
         {{ t("text10") }}
       </p>
+
     </v-alert>
+
   </div>
 </template>
 <script setup lang="ts">
@@ -153,8 +159,8 @@ const { t } = useI18n({
         "Am Login-Portal der Hochschule können verschiedene Arten von zweiten Faktoren verwendet werden. ",
       subtitle3: "Sicherheitstoken",
       text4:
-        "Präferiert wird die Verwendung sogenannter „Sicherheitstoken“, die in verschiedenen Formen existieren. Das Login-Portal unterstützt dabei alle Geräte, die den FIDO2 / WebAuthn-Standard unterstützen. Dazu gehören z. B.: ",
-      li4: "USB-Tokens wie YubiKeys",
+        "Das Login-Portal unterstützt eine Vielzahl sogenannter „Sicherheitstoken“. Dabei handelt es sich um Hardware-Module, in denen die Schlüssel für den zweiten Faktor sicher verwahrt werden. Solche Sicherheitstoken existieren in verschiedenen Formen, wie beispielsweise: ",
+      li4: "USB-Schlüsselanhänger wie YubiKeys",
       li5: "Aktuelle Windows-Geräte mit aktiviertem Windows Hello",
       li6: "Apple Passkey auf",
       macOs: "macOS",
@@ -163,9 +169,9 @@ const { t } = useI18n({
       li7: "Google Passkey für",
       li7Link: "Android und Chrome",
       text5:
-        "Hinweis: An alle Beschäftigten der Hochschule werden USB-Token (sogenannte YubiKeys) ausgegeben. Bitte wenden Sie sich ggf. an Ihr Sekretariat, das Ihnen einen YubiKey zur Verfügung stellen wird.",
+        "Hinweis: An alle Beschäftigten der Hochschule werden USB-Schlüsselanhänger (YubiKeys) ausgegeben. Bitte verwenden Sie diese YubiKeys als zweiten Faktor.",
       text51:
-        "Zur Registrierung Ihres persönlichen USB-Token stellen Sie bitte sicher, dass Sie den Token im Gerät eingesteckt haben. Fahren Sie anschließend die Einrichtung mit einem Klick auf die Schaltfläche „Weiter (Registrierung Sicherheitstoken)“ fort und folgen den Anweisungen. Unter anderem müssen Sie nun die Verwendung des USB-Tokens auswählen und am USB-Token dann auf die leuchtende Schaltfläche tippen.",
+        "Zur Registrierung Ihres persönlichen USB-Token stellen Sie bitte sicher, dass Sie den Token im Gerät eingesteckt haben. Fahren Sie anschließend die Einrichtung mit einem Klick auf die Schaltfläche „Weiter (Sicherheitstoken)“ fort und folgen den Anweisungen. Wichtig ist, dass Sie dabei die Verwendung des USB-Tokens auswählen und am USB-Token zur Bestätigung auf die dann leuchtende Schaltfläche tippen.",
       text52:
         "Die ausgegebenen YubiKeys unterstützen auch NFC und können dadurch auch an modernen Smartphones verwendet werden. Dazu müssen die Schlüssel später bei der Anmeldung am Login-Portal nur an die Geräterückseite gehalten werden.",
       subtitle4: "Einmalpasswörter",
@@ -179,12 +185,13 @@ const { t } = useI18n({
       googlePlay: "Google Play Store",
       googleApple: "Apple App Store",
       text7:
-        "Installieren Sie einer dieser Apps auf Ihrem Smartphone. Fahren Sie anschließend die Einrichtung mit einem Klick auf die Schaltfläche „Weiter (Registrierung Einmalpasswörter)“ fort und folgen den Anweisungen. Dabei werden Sie unter anderem dazu aufgefordert, mit der App einen QR-Code zu scannen. Anschließend ist die App dann in der Lage, Einmalpasswörter zu generieren, die Sie für die Anmeldung am Login-Portal verwenden können.",
-      subtitle6: "Wichtige Hinweise",
+        "Installieren Sie eine dieser Apps auf Ihrem Smartphone. Fahren Sie anschließend die Einrichtung mit einem Klick auf die Schaltfläche „Weiter (Einmalpasswörter)“ fort und folgen den Anweisungen. Dabei werden Sie unter anderem dazu aufgefordert, mit der App einen QR-Code zu scannen. Anschließend ist die App dann in der Lage, Einmalpasswörter zu generieren, die Sie für die Anmeldung am Login-Portal verwenden können.",
+      subtitle6: "Wichtige Hinweise für Beschäftigte",
       text9:
-        "Präferiert ist die Verwendung von Sicherheitstoken. Diese bieten eine höhere Sicherheit, sind resistent gegen Phishing-Angriffe und sind schneller. Für Beschäftigte der Hochschule ist die Verwendung von Sicherheitstoken verpflichtend. Dazu werden von der Hochschule YubiKeys bereitgestellt.",
+        "Beschäftigte werden aufgefordert, die zur Verfügung gestellten YubiKeys zu verwenden. Schließen Sie daher Ihren YubiKey nun an und klicken Sie auf „Weiter (Sicherheitstoken)“. Bei Bedarf können Sie später über die Account-Verwaltung noch alternative zweite Faktoren registrieren.",
+      subtitle7: "Wichtige Hinweise für Studierende und Lehrbeauftragte",
       text10:
-        "Im Login-Portal können später beliebige weitere zweite Faktoren (Token und/oder Einmalpasswörter) registriert werden. Bitte fügen Sie zuerst die Variante hinzu, die Sie am häufigsten verwenden (z. B. Sicherheitstoken). Die zuerst registrierte Variante wird beim Login später als erstes vorgeschlagen. Damit ersparen Sie sich das manuelle Neuauswählen Ihres bevorzugten Faktors bei jedem Login. ",
+        "Studierenden und Lehrbeauftragten wird empfohlen, Einmalpasswörter per Smartphone-App zu registrieren. Falls Sie nicht bereits einen Sicherheitstoken besitzen, installieren Sie also bitte eine der o. g. Authenticator Apps und klicken Sie anschließend auf „Weiter (Einmalpasswörter)“.",
     },
     en: {
       title: "2nd Factor / Multi-Factor Authentication",
@@ -204,8 +211,8 @@ const { t } = useI18n({
         "The university's login portal supports different types of second factors that are described in the following.",
       subtitle3: "Security Token",
       text4:
-        "The login portal supports preferably “security tokens” which can take on various forms. This includes all physical devices that support the FIDO2 / WebAuthn standard. For example:",
-      li4: "USB hardware token like YubiKeys",
+        'The login portal supports a variety of different "security tokens". These are hardware modules in which the keys for the second factor are securely stored. Such security tokens exist in various forms, such as:',
+      li4: "USB sticks like YubiKeys",
       li5: "Current Windows devices with Windows Hello enabled",
       li6: "Apple Passkey on ",
       macOs: "macOS",
@@ -229,12 +236,13 @@ const { t } = useI18n({
       googlePlay: "Google Play Store",
       googleApple: "Apple App Store",
       text7:
-        'Install one of these apps on your smartphone. Then continue the setup process by clicking the "Next (register one-time passwords)" button below and following the instructions. Among other things, you will be prompted to scan a QR code with the app. The app will then be able to generate one-time passwords that you can use within future logins to the login portal.',
-      subtitle6: "Important Notes",
+        'Install one of these apps on your smartphone. Then continue the setup process by clicking the "Next (one-time passwords)" button below and following the instructions. Among other things, you will be prompted to scan a QR code with the app. The app will then be able to generate one-time passwords that you can use within future logins to the login portal.',
+      subtitle6: "Important Notes for Employees",
       text9:
-        "The use of security tokens is preferred. These offer greater security, are resistant to phishing attacks and are faster. The use of security tokens is mandatory for employees of the university. YubiKeys are provided to all employees for this purpose.",
+        'Employees are requested to use the provided YubiKeys. Please connect your YubiKey now and click on "Next (security token)" to proceed. Note that if necessary, you can register alternative second factors later via the account management self-service.',
+      subtitle7: "Important Notes for Students and Guest Lecturers",
       text10:
-        "Any other second factors (tokens and/or one-time passwords) can be registered later in the account management self-service. Please add the variant you use most often first (e.g., security token). The first registered variant will be suggested as the primary one when logging in later. This saves you from having to manually reselect your preferred factor every time you log in. ",
+        'Students and guest lecturers are recommended to enrol one-time passwords via smartphone app. Hence, if you do not already own a security token, please install one of the above-mentioned authenticator apps and then click on "Next (one-time passwords)" to proceed.',
     },
   },
 });
