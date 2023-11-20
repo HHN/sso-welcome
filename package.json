@@ -24,7 +24,7 @@
     "@types/node": "^20.9.0",
     "@vitejs/plugin-vue": "^3.0.3",
     "@vue/eslint-config-typescript": "^11.0.0",
-    "eslint": "^8.52.0",
+    "eslint": "^8.54.0",
     "eslint-plugin-vue": "^9.18.1",
     "sass": "^1.69.4",
     "typescript": "^5.2.2",
