@@ -11,7 +11,7 @@
   "dependencies": {
     "@babel/types": "^7.23.5",
     "@fontsource/roboto": "^5.0.8",
-    "@mdi/font": "7.0.96",
+    "@mdi/font": "7.3.67",
     "core-js": "^3.33.3",
     "keycloak-js": "^23.0.1",
     "pinia": "^2.1.7",
