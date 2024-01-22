@@ -12,7 +12,7 @@
     "@babel/types": "^7.23.6",
     "@fontsource/roboto": "^5.0.8",
     "@mdi/font": "7.3.67",
-    "core-js": "^3.33.3",
+    "core-js": "^3.35.1",
     "keycloak-js": "^23.0.4",
     "pinia": "^2.1.7",
     "vue": "^3.4.14",
